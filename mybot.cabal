@@ -1,0 +1,44 @@
+cabal-version:       2.2
+
+name:                mybot
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/githubuser/mybot#readme
+license:             BSD-3-Clause
+license-file:        LICENSE
+author:              Daria Glaadysheva, Daniil Golomolzin
+maintainer:          example@example.com
+copyright:           2025 Daria Glaadysheva, Daniil Golomolzin
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+                     CHANGELOG.md
+
+executable mybot
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  build-depends:       
+    base >= 4.7 && < 5,
+    telegram-bot-simple,
+    telegram-bot-api,
+    text,
+    time,
+    mtl,
+    sqlite-simple,
+    HDBC,
+    HDBC-sqlite3,
+    containers,
+    bytestring,
+    parsec,
+    servant-client >= 0.20
+  ghc-options:         -Wall
+                       -Wcompat
+                       -Widentities
+                       -Wincomplete-record-updates
+                       -Wincomplete-uni-patterns
+                       -Wmissing-export-lists
+                       -Wmissing-home-modules
+                       -Wpartial-fields
+                       -Wredundant-constraints
